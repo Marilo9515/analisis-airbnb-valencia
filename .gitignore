@@ -1,0 +1,25 @@
+# Ignorar la carpeta de datos reales pesados (¡CRÍTICO para evitar el error de 100MB!)
+data/
+
+# Ignorar entornos virtuales y variables de entorno
+venv/
+env/
+.env
+
+# Ignorar archivos temporales y cachés de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Ignorar configuraciones locales del editor VSCode
+.vscode/
+
+# Ignorar archivos ocultos del sistema operativo (Mac/Windows)
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Ignorar cachés de Jupyter Notebooks (por si los usas en el futuro)
+.ipynb_checkpoints/
