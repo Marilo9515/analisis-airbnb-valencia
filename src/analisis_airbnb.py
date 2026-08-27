@@ -1,8 +1,3 @@
-### 4. El archivo ejecutable `src/analisis_airbnb.py`
-Este es el archivo principal que procesa tus datos. Es el mismo de la respuesta anterior, pero le he añadido un pequeño selector para que intente leer `data/` (si estás en tu ordenador con los datos reales) o `data_sample/` si alguien lo descarga de GitHub sin los datos completos.
-
-**Contenido de `src/analisis_airbnb.py`:**
-```python
 import pandas as pd
 import geopandas as gpd
 from pathlib import Path
@@ -33,7 +28,7 @@ def cargar_datos_año(año):
         "listings": pd.read_csv(ruta_año / "listings.csv", low_memory=False),
         "reviews": pd.read_csv(ruta_año / "reviews.csv", low_memory=False),
         "calendar": pd.read_csv(ruta_año / "calendar.csv.gz", compression='gzip', low_memory=False),
-        "neigh": pd.read_csv(ruta_año / "neighbourhoods.csv")
+        "neigh": pd.read_csv(ruta_año / "neighbourhoods.csv"),
 	"mapa_barrios": gpd.read_file(ruta_año / "neighbourhoods.geojson")
     }
     return datos
